@@ -1,0 +1,97 @@
+data;
+
+/*sets for ENTRANCE*/
+set ENTRANCE:= east west north;
+#subsets:
+set MAIN:= east;
+set NOTMAIN:= west north;
+set WEST:= west;
+set NORTH:= north;
+
+/*sets for ELEMENT*/
+set ELEMENT:= vending_machine turnstile employee;
+#subsets:
+set MCH_TRN:= vending_machine turnstile;
+set TURNSTILE:= turnstile;
+
+/*sets for Part 2*/
+set ROBOTS:= r1 r2 r3 r4 r5 r6 r7 r8;
+set GALLERIES:= A B C D E F G H I J K L M N O P Q;
+#subsets:
+set WESTGALLERIES:= A B C D E F G H I J;
+set EASTGALLERIES:= K L M N O P Q;
+set HALLSAB:= A B;
+set HALLSCD:= C D;
+set NOTWEST:= r3 r5 r6;
+set NOTEAST:= r2 r4;
+
+
+/*Parameters*/
+
+#Part 1
+param WaitingTime:=
+east	130
+west	100
+north	90;
+
+param ReductionTime:=
+vending_machine		2
+turnstile	3
+employee	4;
+
+param CostPerDay:=
+vending_machine		32
+turnstile	40
+employee	64;
+
+#Part 2
+param TimePresentation:=
+r1	4
+r2	6
+r3	5
+r4	3
+r5	2
+r6	3
+r7	4
+r8	5;
+
+param EnergyPerUnit:=
+r1	7
+r2	5
+r3	3
+r4	1
+r5	2
+r6	4
+r7	4
+r8	5;
+
+param MaxEnergy:=
+r1	100
+r2	90
+r3	95
+r4	40
+r5	45
+r6	75
+r7	85
+r8	60;
+
+param NumItems:=
+A	5
+B	5
+C	5
+D	6
+E	6
+F	4
+G	4
+H	4
+I	7
+J	7
+K	3
+L	3
+M	3
+N	2
+O	2
+P	2
+Q	2;
+
+end;
